@@ -1,0 +1,404 @@
+/* ✅ 전체 기본 설정 */
+body {
+  font-family: "Pretendard", sans-serif;
+  background: linear-gradient(160deg, #0f172a, #1e293b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #f1f5f9;
+}
+
+/* ✅ 결과 화면일 때 상단 여백 확보 */
+body.show-result {
+  align-items: flex-start;
+  height: auto;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+/* ✅ 인트로 화면 */
+.start-container {
+  text-align: center;
+  background: #1e293b;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  max-width: 480px;
+  width: 90%;
+  transition: opacity 0.3s ease;
+}
+
+.start-container h1 {
+  font-size: 22px;
+  color: #34d399;
+  margin-bottom: 16px;
+}
+
+.start-container p {
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+#start-btn {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #10b981, #34d399);
+  color: #0f172a;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+#start-btn:hover {
+  background: linear-gradient(90deg, #34d399, #6ee7b7);
+}
+
+/* ✅ 테스트 화면 */
+.quiz-container {
+  background: #1e293b;
+  padding: 36px;
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  width: 90%;
+  max-width: 480px;
+  text-align: center;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background: #334155;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #34d399);
+  transition: width 0.3s ease-in-out;
+}
+
+/* ✅ Likert 척도 */
+.likert {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.likert-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #64748b;
+  background: #1e293b;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.circle:hover {
+  border-color: #22d3ee;
+  transform: scale(1.1);
+}
+
+.circle.active {
+  background: #10b981;
+  border-color: #34d399;
+  box-shadow: 0 0 8px #10b981;
+  transform: scale(1.15);
+}
+
+.likert-item span {
+  font-size: 12px;
+  color: #cbd5e1;
+}
+
+/* ✅ 버튼 */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #10b981, #34d399);
+  color: #0f172a;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #34d399, #6ee7b7);
+}
+
+#back-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: #334155;
+  color: #94a3b8;
+}
+
+/* ✅ 결과 페이지 */
+.result-page {
+  background: #0f172a;
+  color: #f1f5f9;
+  border-radius: 24px;
+  padding: 60px 28px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  width: 90%;
+  max-width: 720px;
+  margin: 40px auto 60px;
+  text-align: center;
+}
+
+.result-image {
+  width: 320px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(52, 211, 153, 0.35);
+}
+
+.result-type {
+  font-size: 42px;
+  color: #34d399;
+  margin: 20px 0 6px 0;
+}
+
+.result-title {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.result-sub {
+  color: #a7f3d0;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.result-desc {
+  color: #e2e8f0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  white-space: pre-line;
+  padding: 0 8px;
+}
+
+/* ✅ 리포트 텍스트 블록 */
+.result-detail {
+  margin: 0 32px;
+  text-align: center;
+}
+
+.result-detail h3 {
+  color: #34d399;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 32px;
+  margin-bottom: 8px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(52, 211, 153, 0.25);
+}
+
+.result-detail p {
+  color: #cbd5e1;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  white-space: pre-line;
+}
+
+.result-detail ul {
+  text-align-last: left;
+  color: #a5f3fc;
+  line-height: 1.6;
+  margin: 10px 0 30px 10px;
+  padding-left: 10px;
+}
+
+.result-detail ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* ✅ 버튼 그룹 */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.retry-btn {
+  padding: 12px 26px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #10b981, #34d399);
+  color: #0f172a;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.retry-btn:hover {
+  background: linear-gradient(90deg, #34d399, #6ee7b7);
+}
+
+.retry-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ✅ 반응형 */
+@media (max-width: 768px) {
+  .result-page {
+    max-width: 90%;
+    padding: 32px 20px;
+  }
+
+  .result-type {
+    font-size: 32px;
+  }
+
+  .result-title {
+    font-size: 20px;
+  }
+
+  .result-desc {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .result-detail h3 {
+    font-size: 18px;
+  }
+
+  .result-detail p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .result-detail ul {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body.show-result {
+    padding-top: 40px;
+  }
+
+  .result-page {
+    padding: 24px 16px;
+    margin: 16px auto 40px;
+  }
+
+  .result-type {
+    font-size: 28px;
+  }
+
+  .result-title {
+    font-size: 18px;
+  }
+
+  .result-sub {
+    font-size: 14px;
+  }
+
+  .result-desc {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .result-detail {
+    margin: 0 8px;
+  }
+
+  .result-detail h3 {
+    font-size: 17px;
+    border-top: none;
+    margin-top: 24px;
+  }
+
+  .result-detail p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .result-image {
+    width: 80%;
+    max-width: 260px;
+    border-radius: 12px;
+  }
+
+  .result-detail ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+}
+/* ✅ 이미지 ↔ 그래프 전환 카드 */
+.flip-card {
+  perspective: 1000px;
+  width: 320px;
+  height: 320px; /* 반드시 추가 */
+  margin: 20px auto;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.flip-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+  background: rgba(15, 23, 42, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
